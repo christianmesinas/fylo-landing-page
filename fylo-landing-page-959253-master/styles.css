@@ -1,0 +1,14 @@
+header {
+  background-color: linear-gradient(hsl(243, 87%, 12%), hsl(243, 86%, 85%));
+}
+
+h1 {
+  color: black;
+}
+
+p {
+  color: black;
+}
+ul#links {
+  list-style-type: none;
+}
