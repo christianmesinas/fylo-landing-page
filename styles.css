@@ -1,0 +1,173 @@
+/*algemene styling*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family:'Open Sans', sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+img{
+  max-width:100%;
+  max-height:100%;
+}
+
+/* Text */
+
+.bold-text {
+  font-weight: 700;
+  color: white;
+}
+
+p {
+  color: black;
+}
+
+h1 {
+  color: black;
+}
+
+/* Topbar */
+
+.topbar{
+  display: flex;
+
+}
+
+.sign-in-button {
+  background-color: transparent;
+  margin-left: auto;
+  margin-top: 15px;
+}
+.sign-up-button{
+  margin-top: 15px;
+  margin-right: 10px;
+}
+.logo-img{
+  width: 100px;
+  height: 40px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+/* Header */
+
+header {
+  background-image: linear-gradient(hsl(243, 87%, 12%), hsl(243, 86%, 85%));
+  font-family: "Raleway", sans-serif;
+  font-weight: 700px;
+  height: 550px;
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 0 74%);
+}
+.toptitle{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr) ;
+  grid-template-areas:
+      "s s s s s s i i i i i i"
+      "b b b b b b i i i i i i";
+}
+.subtitle {
+  color: white;
+  width: 400px;
+  margin-left: 15px;
+  grid-area: s;
+
+}
+.started-Button{
+  grid-area: b;
+  padding: 1px;
+  margin-left: 15px;
+}
+
+.img-hero {
+  grid-area: i;
+  height: 250px;
+  width: 250px;
+
+}
+
+
+/* Column Section*/
+
+.Productive{
+  text-align: center;
+  grid-column: 1/-1;
+}
+.Productive-paragraph{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr) ;
+}
+.img-features{
+  grid-area: img-features;
+  height: 300px;
+  width: 300px;
+  margin-left: 15px;
+  margin-top: -300px;
+  grid-column: 1/4;
+  grid-row: 3/4;
+
+}
+.platforms{
+  grid-area: platforms;
+  grid-column: 3/6;
+}
+.collaboration{
+  grid-area: collaboration;
+  grid-column: 4/7
+}
+.Security{
+  grid-area: security;
+}
+.backups{
+  grid-area: backups;
+}
+.columns{
+  width: 400px;
+  height: 100px;
+  font-weight: 400;
+
+}
+
+/* Button Styling */
+
+button {
+  background-color: #00e68a;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-family:'Open Sans', sans-serif;
+  font-size: 16px;
+  cursor:pointer;
+}
+
+
+/* Footer */
+
+footer {
+  background-color: hsl(243, 87%, 12%);
+  clip-path: polygon(0 100%, 0 0%, 100% 15%, 100% 100%)
+}
+
+.info{
+  color: white;
+}
+
+.updates {
+  color: white;
+}
