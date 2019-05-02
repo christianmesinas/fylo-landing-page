@@ -26,11 +26,6 @@ img{
 
 /* Text */
 
-.bold-text {
-  font-weight: 700;
-  color: white;
-}
-
 p {
   color: black;
 }
@@ -50,8 +45,11 @@ h1 {
   background-color: transparent;
   margin-left: auto;
   margin-top: 15px;
+  padding: 15px 32px;
+
 }
 .sign-up-button{
+  padding: 15px 32px;
   margin-top: 15px;
   margin-right: 10px;
 }
@@ -74,10 +72,11 @@ header {
 .toptitle{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, 1fr) ;
+  grid-template-rows: repeat(3, 1fr) ;
   grid-template-areas:
-      "s s s s s s i i i i i i"
-      "b b b b b b i i i i i i";
+      "s s s s s s . . . i i i"
+      "b b . . . . . . . i i i"
+      ". . . . . . . . . i i i";
 }
 .subtitle {
   color: white;
@@ -86,9 +85,11 @@ header {
   grid-area: s;
 
 }
-.started-Button{
+.started-button{
   grid-area: b;
-  padding: 1px;
+  padding:15px 32px;
+  margin-top:-15px;
+  margin-bottom: 60px;
   margin-left: 15px;
 }
 
@@ -105,41 +106,65 @@ header {
 .Productive{
   text-align: center;
   grid-column: 1/-1;
+  grid-area: pr;
 }
 .Productive-paragraph{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(4, 1fr) ;
+  grid-template-rows: repeat(5, 1fr) ;
+  grid-template-areas:
+      "pr pr pr pr pr pr pr pr pr pr pr pr"
+      ". i i i i pl pl pl . c c c"
+      ". i i i i pl pl pl . c c c"
+      ". i i i i s s s . b b b"
+      ". . . . . s s s . b b b";
 }
 .img-features{
-  grid-area: img-features;
+  grid-area: i;
   height: 300px;
   width: 300px;
   margin-left: 15px;
   margin-top: -300px;
-  grid-column: 1/4;
-  grid-row: 3/4;
 
 }
-.platforms{
-  grid-area: platforms;
-  grid-column: 3/6;
+.columns .platforms{
+  grid-area: pl;
 }
-.collaboration{
-  grid-area: collaboration;
-  grid-column: 4/7
+.columns .collaboration{
+  grid-area: c;
 }
-.Security{
-  grid-area: security;
+.columns .security{
+  grid-area: s;
 }
-.backups{
-  grid-area: backups;
+.columns .backups{
+  grid-area: b;
 }
 .columns{
   width: 400px;
   height: 100px;
   font-weight: 400;
-
+}
+.Early-Access{
+text-align: center;
+display: grid;
+grid-template-columns: repeat(10, 1fr);
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-areas:
+  ". t t t t t t t t ."
+  ". . p p p p p p . ."
+  ". . p p p p p p . .";
+}
+.title-Early-Access{
+  grid-area: t;
+}
+.paragraph-Early-Access{
+  grid-area: p;
+}
+.placeholder-Button{
+  text-align: center;
+}
+.join-Button{
+  padding: 15px 32px;
 }
 
 /* Button Styling */
@@ -149,7 +174,6 @@ button {
   border: none;
   border-radius: 4px;
   color: white;
-  padding: 15px 32px;
   text-align: center;
   font-family:'Open Sans', sans-serif;
   font-size: 16px;
@@ -164,10 +188,79 @@ footer {
   clip-path: polygon(0 100%, 0 0%, 100% 15%, 100% 100%)
 }
 
-.info{
-  color: white;
+.img-logo{
+  margin-left: 15px;
+  grid-area: il;
+}
+.img-phone{
+  margin-left: 15px;
+  grid-area: ip;
+}
+.img-email{
+  margin-left: 15px;
+  grid-area: ie;
 }
 
-.updates {
+.links{
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    ". . pf pc ps . . "
+    ". . . . . . ."
+    ". . lf lc ls . . "
+    ". . lf lc ls . . "
+    ". . lf lc ls . . "
+    ". . lf lc ls . . ";
+}
+.paragraph-links-fylo{
+  grid-area:pf;
+  font-weight: 700;
   color: white;
+  }
+.links-fylo{
+  grid-area:lf;
+  }
+.paragraph-links-company{
+  grid-area:pc;
+  font-weight: 700;
+  color: white;
+  }
+.links-company{
+  grid-area:lc;
+  }
+.paragraph-links-support{
+  grid-area:ps;
+  font-weight: 700;
+  color: white;
+    }
+.links-support{
+  grid-area:ls;
+    }
+.updates-email{
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+      ". . . . . . . . . . up up up ."
+      ". . . . . . . . . . . . . .";
+}
+
+.join-Button-updates{
+  grid-area:jb;
+  padding: 15px 32px;
+  margin-top: 25px;
+}
+.info{
+  grid-area:in;
+  color: white;
+}
+.updates {
+  grid-area:up;
+  color: white;
+}
+.email{
+  grid-area:em;
+  margin-left: 1000px
 }
